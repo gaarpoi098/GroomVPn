@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    color: white;
+    overflow-x: hidden;
+}
+
+/* 🔥 ЖИВОЙ ГРАДИЕНТНЫЙ ФОН */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        #120b1f,
+        #2a0b16,
+        #3a0d1f,
+        #120b1f
+    );
+    background-size: 600% 600%;
+    animation: gradientMove 18s ease infinite;
+    z-index: -3;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ❄️ снег */
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff3b3b;
+    text-shadow: 0 0 12px #ff3b3b;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #ff3b3b;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 140px 20px;
+}
+
+.hero h1 {
+    font-size: 54px;
+    text-shadow: 0 0 25px #ff3b3b;
+}
+
+/* КНОПКИ */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    border-radius: 12px;
+    background: #ff3b3b;
+    box-shadow: 0 0 20px #ff3b3b;
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* КАРТОЧКИ */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+    padding: 60px;
+}
+
+.card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #ff3b3b;
+}
+
+.price {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #ff3b3b;
+}
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: .7;
+}
